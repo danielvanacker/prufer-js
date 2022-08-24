@@ -3,7 +3,7 @@ Transform a Prüfer sequence into an array of edges.
 
 ## Usage
 ```TS
-const my_prufer_sequence = [4,3,0];
+const my_prufer_sequence = [4,3,0]; // length of the sequence should be num_nodes - 2; Elements in the sequence should be between 0 and num_nodes - 1 (both inclusive)
 const edges = pruferLinearTime(my_prufer_sequence);
 // edges = [[1, 4], [2, 3], [3, 0], [0, 4]]
 ```
