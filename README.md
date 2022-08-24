@@ -13,3 +13,7 @@ Originally, I was using [jleppert's js implementation](https://github.com/jleppe
 
 I found a [linear time implementation of the algorithm on cp-algorithms.com](https://cp-algorithms.com/graph/pruefer_code.html#prufer-code_1) in c++ so decided to implement that in TS and JS.
 
+## Performance
+I have not performed any serious benchmarks but in my initial testing 
+- The non-linear-time implementation was taking 100+ seconds on 500,000 elements
+- The linear-time implementation takes <1 second on 500,000 elements
