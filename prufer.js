@@ -1,11 +1,11 @@
-export function pruferLinearTime(random_arr) {
-  const n = random_arr.length + 2;
+export function pruferLinearTime(sequence) {
+  const n = sequence.length + 2;
   const degree = [];
   for (let j = 0; j < n; j++) {
     degree.push(1);
   }
-  for (let i = 0; i < random_arr.length; i++) {
-    degree[random_arr[i]]++;
+  for (let i = 0; i < sequence.length; i++) {
+    degree[sequence[i]]++;
   }
 
   let ptr = 0;
@@ -15,8 +15,8 @@ export function pruferLinearTime(random_arr) {
   let leaf = ptr;
 
   const edges = [];
-  for (let i = 0; i < random_arr.length; i++) {
-    const v = random_arr[i];
+  for (let i = 0; i < sequence.length; i++) {
+    const v = sequence[i];
     edges.push([leaf, v]);
     if (--degree[v] === 1 && v < ptr) {
       leaf = v;
